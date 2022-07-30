@@ -57,16 +57,8 @@ EOF
 
 ## FAQ
 
-- ログインしようとしたら`502`エラーが出る
-
-ログイン時に`Failed to Login: AxiosError: Request failed with status code 502`というエラーが出る場合、
-認証用の外部サービス `blackauth` が起動していない可能性があります。
-この場合は手動でblackauthを起動してください。
-
-```bash
-sudo -i -u isucon
-sudo systemctl start blackauth
-```
+- ~ログインしようとしたら`502`エラーが出る~  
+ (修正されていました: https://github.com/matsuu/cloud-init-isucon/commit/62892c5e6dfb2657205c620417e6274afc52cb76)
 
 ## LICENSE
 
