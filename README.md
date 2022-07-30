@@ -3,11 +3,23 @@
 https://github.com/matsuu/cloud-init-isucon とTerraformでさくらのクラウド上にISUCON過去問環境を構築します。
 
 現在は以下に対応しています。
-- ISUCON12予選
 
-## 手順
+### 公式
 
-- このリポジトリをクローン
+- (未対応)ISUCON10予選
+- (未対応)ISUCON11予選
+- [ISUCON12予選](./isucon12q)
+
+### 非公式
+
+- (未対応)Pixiv社内ISUCON2016
+- (未対応)ISUCON11事前講習
+- (未対応)Kayac社内ISUCON2022
+- (未対応)NRI-ISUCON2022
+
+## 構築手順
+
+- このリポジトリをクローン & 構築したい環境のディレクトリへ移動
 - さくらのクラウドのAPIキーを環境変数に設定
 - (必要に応じて)ゾーンと公開鍵ファイルのパスを修正
 - `terraform apply`実施
@@ -15,6 +27,9 @@ https://github.com/matsuu/cloud-init-isucon とTerraformでさくらのクラウ
 ```bash
 # クローン
 git clone https://github.com/yamamoto-febc/sacloud-terraform-isucon.git && cd sacloud-terraform-isucon
+
+# 構築したい環境のディレクトリへ移動(ここでは例としてisucon12予選)
+cd isucon12q
 
 # さくらのクラウドのAPIキーを環境変数に設定
 export SAKURACLOUD_ACCESS_TOKEN="" # ここにアクセストークンを指定
@@ -26,12 +41,12 @@ export SAKURACLOUD_ACCESS_TOKEN_SECRET="" # ここにアクセストークンシ
 terraform init && terraform apply
 ```
 
-### 変数のデフォルト値
+### 変数の設定
 
-デフォルトではゾーンと公開鍵ファイルのパスとして以下を利用します。
+各環境とも以下2つの変数を利用します。
 
-- ゾーン: `tk1b`(東京第2ゾーン)
-- 公開鍵ファイルのパス: `~/.ssh/id_rsa.pub`
+- ゾーン(`zone`): デフォルト値は`tk1b`(東京第2ゾーン)
+- 公開鍵ファイルのパス(`public_key_path`): デフォルト値は`~/.ssh/id_rsa.pub`
 
 必要に応じてTerraformのvariableを設定してください。
 
@@ -43,22 +58,10 @@ public_key_path="~/.ssh/id_ed25519.pub"
 EOF
 ```
 
-## 動作確認
+## 参考リンク
 
-サーバのIPアドレスは`terraform output ip_address`で確認できます。  
-その後`ssh ubuntu@${サーバのIPアドレス}`でSSH接続出来るはずです。
-
-こちらも合わせてご確認ください。
-
-* [cloud-init-isucon/isucon12q/README](https://github.com/matsuu/cloud-init-isucon/blob/main/isucon12q/README.md)
-* [ISUCON12 レギュレーション](https://isucon.net/archives/56671734.html)
-* [ISUCON12 予選当日マニュアル](https://gist.github.com/mackee/4320c18919c8f6f1867849378a17e651)
-* [ISUCON12 予選リポジトリ](https://github.com/isucon/isucon12-qualify)
-
-## FAQ
-
-- ~ログインしようとしたら`502`エラーが出る~  
- (修正されていました: https://github.com/matsuu/cloud-init-isucon/commit/62892c5e6dfb2657205c620417e6274afc52cb76)
+- [matsuu/cloud-init-isucon](https://github.com/matsuu/cloud-init-isucon)
+- [さくらのナレッジ: ISUCON過去問題の環境を「さくらのクラウド」で構築する](https://knowledge.sakura.ad.jp/31520/)
 
 ## LICENSE
 
