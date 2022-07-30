@@ -18,7 +18,7 @@ git clone https://github.com/yamamoto-febc/sacloud-terraform-isucon.git
 
 # さくらのクラウドのAPIキーを環境変数に設定
 export SAKURACLOUD_ACCESS_TOKEN="" # ここにアクセストークンを指定
-export SAKURACLOUD_ACCESS_TOKEN="" # ここにアクセストークンシークレットを指定
+export SAKURACLOUD_ACCESS_TOKEN_SECRET="" # ここにアクセストークンシークレットを指定
 
 # (必要に応じて)ゾーンの公開鍵ファイルのパスを指定
 
