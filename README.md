@@ -23,7 +23,7 @@ export SAKURACLOUD_ACCESS_TOKEN="" # ここにアクセストークンシーク�
 # (必要に応じて)ゾーンの公開鍵ファイルのパスを指定
 
 # 実行
-terraform apply
+terraform init && terraform apply
 ```
 
 ### 変数のデフォルト値
