@@ -14,7 +14,7 @@ https://github.com/matsuu/cloud-init-isucon とTerraformでさくらのクラウ
 
 ```bash
 # クローン
-git clone https://github.com/yamamoto-febc/sacloud-terraform-isucon.git
+git clone https://github.com/yamamoto-febc/sacloud-terraform-isucon.git && cd sacloud-terraform-isucon
 
 # さくらのクラウドのAPIキーを環境変数に設定
 export SAKURACLOUD_ACCESS_TOKEN="" # ここにアクセストークンを指定
