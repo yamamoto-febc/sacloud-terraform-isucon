@@ -14,8 +14,8 @@ https://github.com/matsuu/cloud-init-isucon とTerraformでさくらのクラウ
 
 - [Pixiv社内ISUCON2016(private-isu)](./private-isu)
 - [ISUCON11事前講習](./isucon11-prior)
-- (未対応)Kayac社内ISUCON2022
-- (未対応)NRI-ISUCON2022
+- [Kayac社内ISUCON2022](./kayac-isucon-2022)
+- [NRI-ISUCON2022](./nri-isucon-2022)
 
 ## 構築手順
 
