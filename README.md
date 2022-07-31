@@ -6,7 +6,7 @@ https://github.com/matsuu/cloud-init-isucon とTerraformでさくらのクラウ
 
 ### 公式
 
-- (未対応)ISUCON10予選
+- [ISUCON10予選](./isucon10q)
 - [ISUCON11予選](./isucon11q)
 - [ISUCON12予選](./isucon12q)
 
